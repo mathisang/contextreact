@@ -1,14 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import Students from "./Students";
+
+import AuthContext from "./context/AuthContext";
+import LogContainer from "./LogContainer";
 
 function App() {
+
   return (
-    <Students>
-    </Students>
+    <AuthContext.Provider value={ { isAuth: false } }>
+      <LogContainer/>
+    </AuthContext.Provider>
   );
+
 }
 
 export default App;
