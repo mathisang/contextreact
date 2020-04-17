@@ -7,13 +7,15 @@ const styles = {
 }
 
 export default () => {
-    const {isAuth} = React.useContext(AuthContext);
+    const {isAuth, setAuth} = React.useContext(AuthContext);
 
     return (
         <div
             style={isAuth ? styles.green : styles.red}
         >
             {isAuth ? "OK" : "KO"}
+            <hr/>
+            <button onClick={ e => setAuth( ! isAuth ) }>CHANGE ME</button>
         </div>
 
     )
