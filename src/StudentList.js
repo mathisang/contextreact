@@ -6,7 +6,8 @@ export default () => (
             {
                 value =>
                     (
-                        value.map( s => <li> s.name </li> )
+                        value.map( s => s.name )
+                        //<li> test </li>
                     )
             }
         </HeticContext.Consumer>
